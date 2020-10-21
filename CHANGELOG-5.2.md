@@ -389,6 +389,7 @@ To get the diff between two versions, go to https://github.com/symfony/symfony/c
 
 * 5.2.0-BETA2 (2020-10-14)
 
+ * feature #22592 [DoctrineBridge] Allow validating every class against unique entity constraint (wkania)
  * feature #38552 [Security][Notifier] Added integration of Login Link with the Notifier component (wouterj)
  * bug #38566 Fix minor issue when sharing windows between Limiters (Nyholm)
  * feature #38563 [Messenger][Redis] Adding support for lazy connect (Nyholm)
