@@ -17,6 +17,8 @@ use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\ConstraintDefinitionException;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
+use Doctrine\ORM\Mapping\MappingException as ORMMappingException;
+use Doctrine\Persistence\Mapping\MappingException as PersistenceMappingException;
 
 /**
  * Unique Entity Validator checks if one or a set of fields contain unique values.
@@ -85,7 +87,7 @@ class UniqueEntityValidator extends ConstraintValidator
         try {
             $repository = $em->getRepository($entityClass);
             $isEntity = true;
-        } catch (\Exception $e) {
+        } catch (ORMMappingException | PersistenceMappingException $e) {
             $isEntity = false;
         }
 
