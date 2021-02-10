@@ -924,7 +924,7 @@ class UniqueEntityValidatorTest extends ConstraintValidatorTestCase
             'message' => 'myMessage',
             'fields' => ['name'],
             'em' => self::EM_NAME,
-            'entityClass' => 'Symfony\Bridge\Doctrine\Tests\Fixtures\Person',
+            'entityClass' => Person::class,
         ]);
 
         $entity = new Person(1, 'Foo');
@@ -958,7 +958,7 @@ class UniqueEntityValidatorTest extends ConstraintValidatorTestCase
             'message' => 'myMessage',
             'fields' => ['primaryName' => 'name', 'secondaryName' => 'name2'],
             'em' => self::EM_NAME,
-            'entityClass' => 'Symfony\Bridge\Doctrine\Tests\Fixtures\DoubleNameEntity',
+            'entityClass' => DoubleNameEntity::class,
         ]);
 
         $entity = new DoubleNameEntity(1, 'Foo', 'Bar');
@@ -986,7 +986,7 @@ class UniqueEntityValidatorTest extends ConstraintValidatorTestCase
             'message' => 'myMessage',
             'fields' => ['primaryName' => 'name'],
             'em' => self::EM_NAME,
-            'entityClass' => 'Symfony\Bridge\Doctrine\Tests\Fixtures\SingleStringIdEntity',
+            'entityClass' => SingleStringIdEntity::class,
         ]);
 
         $dto = new HireAnEmployee('Foo');
@@ -1001,7 +1001,7 @@ class UniqueEntityValidatorTest extends ConstraintValidatorTestCase
             'message' => 'myMessage',
             'fields' => ['name2'],
             'em' => self::EM_NAME,
-            'entityClass' => 'Symfony\Bridge\Doctrine\Tests\Fixtures\SingleStringIdEntity',
+            'entityClass' => SingleStringIdEntity::class,
         ]);
 
         $dto = new HireAnEmployee('Foo');
@@ -1014,7 +1014,7 @@ class UniqueEntityValidatorTest extends ConstraintValidatorTestCase
             'message' => 'myMessage',
             'fields' => ['name'],
             'em' => self::EM_NAME,
-            'entityClass' => 'Symfony\Bridge\Doctrine\Tests\Fixtures\Person',
+            'entityClass' => Person::class,
             'identifierFieldNames' => ['id'],
         ]);
 
@@ -1044,7 +1044,7 @@ class UniqueEntityValidatorTest extends ConstraintValidatorTestCase
             'message' => 'myMessage',
             'fields' => ['name'],
             'em' => self::EM_NAME,
-            'entityClass' => 'Symfony\Bridge\Doctrine\Tests\Fixtures\CompositeIntIdEntity',
+            'entityClass' => CompositeIntIdEntity::class,
             'identifierFieldNames' => ['id1', 'id2'],
         ]);
 
@@ -1066,7 +1066,7 @@ class UniqueEntityValidatorTest extends ConstraintValidatorTestCase
             'message' => 'myMessage',
             'fields' => ['object1' => 'objectOne', 'object2' => 'objectTwo'],
             'em' => self::EM_NAME,
-            'entityClass' => 'Symfony\Bridge\Doctrine\Tests\Fixtures\CompositeObjectNoToStringIdEntity',
+            'entityClass' => CompositeObjectNoToStringIdEntity::class,
             'identifierFieldNames' => ['object1' => 'objectOne', 'object2' => 'objectTwo'],
         ]);
 
@@ -1097,7 +1097,7 @@ class UniqueEntityValidatorTest extends ConstraintValidatorTestCase
             'message' => 'myMessage',
             'fields' => ['object1' => 'objectOne', 'object2' => 'objectTwo'],
             'em' => self::EM_NAME,
-            'entityClass' => 'Symfony\Bridge\Doctrine\Tests\Fixtures\CompositeObjectNoToStringIdEntity',
+            'entityClass' => CompositeObjectNoToStringIdEntity::class,
             'identifierFieldNames' => ['object2' => 'objectTwo'],
         ]);
 
